@@ -11,7 +11,6 @@
  
 #module purge
 module load pytorch/python3.6/0.2.0_3
-source $SCRATCH/nlp-project-data/py3.6.3/bin/activate
-RUNDIR=$SCRATCH/independent-study-data
-$RUNDIR/data/fastText-0.1.0/fasttext supervised -input $RUNDIR/data/sample_data/json_sample10m_fasttext_train -output $RUNDIR/data/sample_data/fasttext_10m_model
-#$RUNDIR/data/fastText-0.1.0/fasttext test $RUNDIR/data/sample_data/fasttext_1m_model.bin $RUNDIR/data/sample_data/json_sample1m_fasttext_test 5
+source activate jobembeddings
+RUNDIR=$SCRATCH/data/jobembeddings
+$RUNDIR/fastText/fasttext supervised -input $RUNDIR/json_sample10m_fasttext_train -output $RUNDIR/fasttext_10m_model

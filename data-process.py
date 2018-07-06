@@ -85,6 +85,6 @@ def load(filename,outputname):
 
 filename = 'json_usa_nyu_09142017.txt'
 output = 'data_title_words'
-#to_csv(filename, output)
+to_csv(filename, output)
 #load(output + '_unigram.pickle', "title_unigram")
-load(output + '_bigram.pickle', "title_bigram")
+#load(output + '_bigram.pickle', "title_bigram")
